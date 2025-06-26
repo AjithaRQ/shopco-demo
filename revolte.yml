@@ -1,17 +1,18 @@
 revolte:
   version: '1.0'
-  project: AccuSure
-  appName: new-test-app
+  project: Frontend project
+  appName: backend-app-new
   env:
-    preview:
+    staging:
+      branch: main
       services:
         rid_1:
           name: web-service
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
-            cpu: 2
-            memory: 2
+            cpu: 1
+            memory: 1
             storage: 30
           properties:
             health: /api/health
@@ -24,7 +25,4 @@ revolte:
           name: db
           type: DATABASE
           specifications:
-            cpu: 2
-            memory: 4
-            storage: 50
             engine: postgres
