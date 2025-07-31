@@ -1,18 +1,17 @@
 revolte:
   version: '1.0'
-  project: Frontend project
-  appName: backend-app-new
+  project: Perplex Project
+  appName: app-new
   env:
-    staging:
-      branch: main
+    preview:
       services:
         rid_1:
           name: web-service
           type: WEB_SERVICE
           entryPoint: index.js
           specifications:
-            cpu: 1
-            memory: 1
+            cpu: 2
+            memory: 2
             storage: 30
           properties:
             health: /api/health
@@ -26,3 +25,6 @@ revolte:
           type: DATABASE
           specifications:
             engine: postgres
+            cpu: 2
+            memory: 1
+            storage: 20
