@@ -3,8 +3,7 @@ revolte:
   project: CCD Project
   appName: app-backend
   env:
-    production:
-      branch: main
+    preview:
       services:
         rid_1:
           name: web-service
@@ -14,22 +13,18 @@ revolte:
             cpu: 2
             memory: 2
             storage: 30
-            autoScaling:
-              replica:
-                min: 1
-                max: 3
           properties:
-            health: /health
+            health: /api/health
             port: 8080
             variables:
               BASE_URL: /api/v1
-              DATABASE_URL: '#{db.dbConnectionString}'
               PORT: 8080
+              DATABASE_URL: '#{db.dbConnectionString}'
         rid_2:
           name: db
           type: DATABASE
           specifications:
             engine: postgres
-            cpu: 2
-            memory: 2
-            storage: 50
+            cpu: 8
+            memory: 32
+            storage: 25
