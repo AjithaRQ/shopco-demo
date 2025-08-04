@@ -1,9 +1,10 @@
 revolte:
   version: '1.0'
-  project: CCD Project
-  appName: app-backend
+  project: Hello
+  appName: halo-be
   env:
-    preview:
+    production:
+      branch: main
       services:
         rid_1:
           name: web-service
@@ -13,8 +14,12 @@ revolte:
             cpu: 2
             memory: 2
             storage: 30
+            autoScaling:
+              replica:
+                min: 1
+                max: 3
           properties:
-            health: /api/health
+            health: /health
             port: 8080
             variables:
               BASE_URL: /api/v1
@@ -25,6 +30,6 @@ revolte:
           type: DATABASE
           specifications:
             engine: postgres
-            cpu: 8
-            memory: 32
-            storage: 25
+            cpu: 2
+            memory: 4
+            storage: 20
