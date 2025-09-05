@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: AD Project
-  appName: backend deployment
+  project: Friday
+  appName: backend
   config:
     codeReview:
       summarize: true
