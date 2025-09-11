@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Friday
-  appName: backend
+  project: Class proj
+  appName: haaaii
   config:
     codeReview:
       summarize: true
@@ -11,6 +11,7 @@ revolte:
     staging:
       branch: main
       codeReview: false
+      codeQuality: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -38,6 +39,7 @@ revolte:
     qa:
       branch: main
       codeReview: true
+      codeQuality: false
       services:
         rid_6:
           type: WEB_SERVICE
@@ -74,6 +76,7 @@ revolte:
     production:
       branch: main
       codeReview: false
+      codeQuality: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -107,6 +110,7 @@ revolte:
             engine: postgres
     preview:
       codeReview: false
+      codeQuality: false
       services:
         rid_1:
           type: WEB_SERVICE
