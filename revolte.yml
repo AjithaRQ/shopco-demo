@@ -44,7 +44,7 @@ revolte:
     qa:
       branch: main
       codeReview: true
-      codeQuality: false
+      codeQuality: true
       services:
         rid_6:
           type: WEB_SERVICE
