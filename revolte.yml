@@ -7,6 +7,11 @@ revolte:
       summarize: true
       suggestFixes: false
       commentStyle: Verbose
+    codeQuality:
+      codeStyle:
+        rules:
+          typescript/adjacentOverloadSignatures: error
+          typescript/arrayType: error
   env:
     staging:
       branch: main
