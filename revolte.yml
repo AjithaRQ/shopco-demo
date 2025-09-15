@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Class proj
-  appName: haaaii
+  project: Codebyte
+  appName: shopco-demo
   config:
     codeReview:
       summarize: true
@@ -12,6 +12,8 @@ revolte:
         rules:
           typescript/adjacentOverloadSignatures: error
           typescript/arrayType: error
+          typescript/noEmptyFunction: error
+          typescript/noEmptyObjectType: warn
   env:
     staging:
       branch: main
