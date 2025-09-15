@@ -14,7 +14,9 @@ revolte:
           javascript/noUnusedVars: error
   env:
     staging:
-      branch: main
+      branch: staging
+      codeReview: true
+      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
