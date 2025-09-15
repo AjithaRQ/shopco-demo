@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Codebyte
-  appName: shopcotest
+  project: Code call
+  appName: appcall
   config:
     codeReview:
       summarize: true
@@ -10,7 +10,8 @@ revolte:
     codeQuality:
       codeStyle:
         rules:
-          typescript/adjacentOverloadSignatures: warn
+          javascript/noUndef: warn
+          javascript/noUnusedVars: warn
   env:
     staging:
       branch: staging
