@@ -7,11 +7,15 @@ revolte:
       summarize: true
       suggestFixes: false
       commentStyle: Verbose
+    codeQuality:
+      codeStyle:
+        rules:
+          typescript/adjacentOverloadSignatures: warn
   env:
     staging:
       branch: staging
       codeReview: true
-      codeQuality: false
+      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -38,6 +42,8 @@ revolte:
             engine: postgres
     qa:
       branch: main
+      codeReview: false
+      codeQuality: false
       services:
         rid_6:
           type: WEB_SERVICE
