@@ -1,22 +1,17 @@
 revolte:
   version: '1.0'
   project: Codebyte
-  appName: Shopco-demo
+  appName: shopcotest
   config:
     codeReview:
       summarize: true
       suggestFixes: false
       commentStyle: Verbose
-    codeQuality:
-      codeStyle:
-        rules:
-          javascript/noUndef: warn
-          javascript/noUnusedVars: error
   env:
     staging:
       branch: staging
       codeReview: true
-      codeQuality: true
+      codeQuality: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -43,8 +38,6 @@ revolte:
             engine: postgres
     qa:
       branch: main
-      codeReview: true
-      codeQuality: true
       services:
         rid_6:
           type: WEB_SERVICE
@@ -80,6 +73,8 @@ revolte:
             engine: postgres
     production:
       branch: main
+      codeReview: false
+      codeQuality: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -112,6 +107,8 @@ revolte:
             storage: 20
             engine: postgres
     preview:
+      codeReview: false
+      codeQuality: false
       services:
         rid_1:
           type: WEB_SERVICE
