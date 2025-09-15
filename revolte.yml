@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
   project: Codebyte
-  appName: shopco-demo
+  appName: Shopco-demo
   config:
     codeReview:
       summarize: true
@@ -10,15 +10,11 @@ revolte:
     codeQuality:
       codeStyle:
         rules:
-          typescript/adjacentOverloadSignatures: error
-          typescript/arrayType: error
-          typescript/noEmptyFunction: error
-          typescript/noEmptyObjectType: warn
+          javascript/noUndef: warn
+          javascript/noUnusedVars: error
   env:
     staging:
       branch: main
-      codeReview: true
-      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -82,8 +78,6 @@ revolte:
             engine: postgres
     production:
       branch: main
-      codeReview: true
-      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -116,15 +110,13 @@ revolte:
             storage: 20
             engine: postgres
     preview:
-      codeReview: true
-      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
           name: web_service
           entryPoint: index.js
           properties:
-            health: /health
+            health: /api/health
             port: 8080
             variables:
               BASE_URL: /api/v1
