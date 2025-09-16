@@ -13,9 +13,9 @@ revolte:
           javascript/noUndef: error
           javascript/noUnusedVars: error
       excludes:
-        - '["[\"[\\\"vc cv vc cv vc\\\"]\"]"]'
+        - '["[\"[\\\"[\\\\\\\"vc cv vc cv vc\\\\\\\"]\\\"]\"]"]'
       includes:
-        - '["[\"[\\\"g fgc vfg  fgcfgvcfg tg\\\"]\"]"]'
+        - '["[\"[\\\"[\\\\\\\"g fgc vfg  fgcfgvcfg tg\\\\\\\"]\\\"]\"]"]'
   env:
     staging:
       branch: staging
@@ -97,7 +97,7 @@ revolte:
             variables:
               BASE_URL: /api/v1
               DATABASE_URL: '#{db.dbConnectionString}'
-              PORT: '#{db.dbPort}'
+              PORT: '8080'
           insights:
             cpu:
               - cpu_time_idle
@@ -112,7 +112,7 @@ revolte:
               - disk_total
           specifications:
             cpu: 2
-            memory: 1
+            memory: 8
             storage: 30
             autoScaling:
               replica:
@@ -123,7 +123,7 @@ revolte:
           name: db
           specifications:
             cpu: 2
-            memory: 1
+            memory: 8
             storage: 20
             engine: postgres
     preview:
