@@ -12,14 +12,6 @@ revolte:
         rules:
           javascript/noUndef: error
           javascript/noUnusedVars: error
-      excludes:
-        - >-
-          ["[\"[\\\"[\\\\\\\"[\\\\\\\\\\\\\\\"vc cv vc cv
-          vc\\\\\\\\\\\\\\\"]\\\\\\\"]\\\"]\"]"]
-      includes:
-        - >-
-          ["[\"[\\\"[\\\\\\\"[\\\\\\\\\\\\\\\"g fgc vfg  fgcfgvcfg
-          tg\\\\\\\\\\\\\\\"]\\\\\\\"]\\\"]\"]"]
   env:
     staging:
       branch: staging
