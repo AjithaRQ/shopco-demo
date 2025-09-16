@@ -13,9 +13,13 @@ revolte:
           javascript/noUndef: error
           javascript/noUnusedVars: error
       excludes:
-        - '["[\"[\\\"[\\\\\\\"vc cv vc cv vc\\\\\\\"]\\\"]\"]"]'
+        - >-
+          ["[\"[\\\"[\\\\\\\"[\\\\\\\\\\\\\\\"vc cv vc cv
+          vc\\\\\\\\\\\\\\\"]\\\\\\\"]\\\"]\"]"]
       includes:
-        - '["[\"[\\\"[\\\\\\\"g fgc vfg  fgcfgvcfg tg\\\\\\\"]\\\"]\"]"]'
+        - >-
+          ["[\"[\\\"[\\\\\\\"[\\\\\\\\\\\\\\\"g fgc vfg  fgcfgvcfg
+          tg\\\\\\\\\\\\\\\"]\\\\\\\"]\\\"]\"]"]
   env:
     staging:
       branch: staging
@@ -110,6 +114,8 @@ revolte:
               - mem_free
             disk:
               - disk_total
+              - disk_used
+              - disk_free
           specifications:
             cpu: 2
             memory: 8
