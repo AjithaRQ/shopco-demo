@@ -10,8 +10,7 @@ revolte:
     codeQuality:
       codeStyle:
         rules:
-          javascript/noUndef: warn
-          javascript/noUnusedVars: warn
+          javascript/noControlRegex: error
   env:
     staging:
       branch: staging
@@ -43,8 +42,6 @@ revolte:
             engine: postgres
     qa:
       branch: staging
-      codeReview: true
-      codeQuality: true
       services:
         rid_6:
           type: WEB_SERVICE
