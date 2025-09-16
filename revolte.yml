@@ -7,6 +7,15 @@ revolte:
       summarize: true
       suggestFixes: false
       commentStyle: Verbose
+    codeQuality:
+      codeStyle:
+        rules:
+          javascript/noUndef: error
+          javascript/noUnusedVars: error
+      excludes:
+        - '["[\"vc cv vc cv vc\"]"]'
+      includes:
+        - '["[\"g fgc vfg  fgcfgvcfg tg\"]"]'
   env:
     staging:
       branch: staging
@@ -52,9 +61,6 @@ revolte:
               BASE_URL: /api/v1
               DATABASE_URL: '#{db.dbConnectionString}'
               PORT: '8080'
-              DATABASE_USERNAME: '#{db.dbUsername}'
-              DATABASE_PASSWORD: '#{db.dbPassword}'
-              DATABASE_NAME: '#{db.dbName}'
           insights:
             cpu:
               - cpu_time_idle
@@ -77,7 +83,7 @@ revolte:
             storage: 20
             engine: postgres
     production:
-      branch: main
+      branch: staging
       codeReview: true
       codeQuality: false
       services:
@@ -103,9 +109,7 @@ revolte:
               - mem_total
               - mem_free
             disk:
-              - disk_free
               - disk_total
-              - disk_used
           specifications:
             cpu: 2
             memory: 1
@@ -119,7 +123,7 @@ revolte:
           name: db
           specifications:
             cpu: 2
-            memory: 4
+            memory: 1
             storage: 20
             engine: postgres
     preview:
