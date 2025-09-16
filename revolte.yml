@@ -13,9 +13,9 @@ revolte:
           javascript/noUndef: error
           javascript/noUnusedVars: error
       excludes:
-        - '["[\"vc cv vc cv vc\"]"]'
+        - '["[\"[\\\"vc cv vc cv vc\\\"]\"]"]'
       includes:
-        - '["[\"g fgc vfg  fgcfgvcfg tg\"]"]'
+        - '["[\"[\\\"g fgc vfg  fgcfgvcfg tg\\\"]\"]"]'
   env:
     staging:
       branch: staging
@@ -47,7 +47,7 @@ revolte:
             engine: postgres
     qa:
       branch: staging
-      codeReview: false
+      codeReview: true
       codeQuality: false
       services:
         rid_6:
@@ -127,7 +127,7 @@ revolte:
             storage: 20
             engine: postgres
     preview:
-      codeReview: false
+      codeReview: true
       codeQuality: false
       services:
         rid_1:
