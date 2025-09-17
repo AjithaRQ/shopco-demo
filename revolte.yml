@@ -42,9 +42,7 @@ revolte:
             storage: 20
             engine: postgres
     qa:
-      branch: staging
-      codeReview: true
-      codeQuality: false
+      branch: task-products-page
       services:
         rid_6:
           type: WEB_SERVICE
@@ -79,9 +77,7 @@ revolte:
             storage: 20
             engine: postgres
     production:
-      branch: staging
-      codeReview: true
-      codeQuality: false
+      branch: main
       services:
         rid_1:
           type: WEB_SERVICE
@@ -125,15 +121,13 @@ revolte:
             storage: 20
             engine: postgres
     preview:
-      codeReview: true
-      codeQuality: false
       services:
         rid_1:
           type: WEB_SERVICE
           name: web_service
           entryPoint: index.js
           properties:
-            health: /api/health
+            health: /health
             port: 8080
             variables:
               BASE_URL: /api/v1
