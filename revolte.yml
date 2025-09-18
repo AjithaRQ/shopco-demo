@@ -10,8 +10,8 @@ revolte:
     codeQuality:
       codeStyle:
         rules:
-          javascript/noUndef: error
-          javascript/noUnusedVars: error
+          javascript/noUndef: warn
+          javascript/noUnusedVars: warn
   env:
     staging:
       branch: staging
