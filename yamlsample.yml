@@ -1,6 +1,6 @@
 revolte:
   version: '1.0'
-  project: ecom22
+  project: ecom222
   appName: fe-app
   env:
     production:
