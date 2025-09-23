@@ -48,8 +48,8 @@ revolte:
             engine: postgres
     qa:
       branch: qa
-      codeReview: false
-      codeQuality: false
+      codeReview: true
+      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -79,8 +79,8 @@ revolte:
             engine: postgres
     production:
       branch: main
-      codeReview: false
-      codeQuality: false
+      codeReview: true
+      codeQuality: true
       services:
         rid_1:
           type: WEB_SERVICE
