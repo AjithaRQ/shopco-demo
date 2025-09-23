@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
   project: Checkcode
-  appName: code-be
+  appName: hashtest
   config:
     codeReview:
       summarize: true
