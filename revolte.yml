@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: ABCDS
-  appName: backend-app
+  project: PROJNEW
+  appName: proj-app-check
   config:
     codeReview:
       summarize: true
@@ -17,6 +17,7 @@ revolte:
       branch: staging
       codeReview: true
       codeQuality: true
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -50,6 +51,7 @@ revolte:
       branch: qa
       codeReview: false
       codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -81,6 +83,7 @@ revolte:
       branch: main
       codeReview: false
       codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -115,6 +118,7 @@ revolte:
     preview:
       codeReview: true
       codeQuality: true
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
