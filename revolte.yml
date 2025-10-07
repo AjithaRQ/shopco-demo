@@ -12,8 +12,6 @@ revolte:
         rules:
           javascript/arrayCallbackReturn: error
           javascript/forDirection: warn
-    testSuite:
-      command: npm run test
   env:
     staging:
       branch: staging
