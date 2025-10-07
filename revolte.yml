@@ -30,6 +30,8 @@ revolte:
               BASE_URL: /api/v1
               DATABASE_URL: '#{db.dbConnectionString}'
               PORT: '8080'
+              VITE_API_URL: test
+              VITE_SECRET_KEY: '#{secretKey}'
           insights:
             cpu:
               - cpu_time_idle
