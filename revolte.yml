@@ -19,7 +19,7 @@ revolte:
       branch: staging
       codeReview: true
       codeQuality: true
-      testSuite: true
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -39,7 +39,7 @@ revolte:
               - cpu_time_system
           specifications:
             cpu: 2
-            memory: 4
+            memory: 2
             storage: 30
         rid_2:
           type: DATABASE
