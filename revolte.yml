@@ -12,12 +12,14 @@ revolte:
         rules:
           javascript/arrayCallbackReturn: error
           javascript/forDirection: warn
+    testSuite:
+      command: npm run test
   env:
     staging:
       branch: staging
       codeReview: true
       codeQuality: true
-      testSuite: false
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
