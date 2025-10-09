@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: PROJNEW
-  appName: proj-app-check
+  project: Potrait
+  appName: shopco-appp
   config:
     codeReview:
       summarize: true
@@ -10,8 +10,8 @@ revolte:
     codeQuality:
       codeStyle:
         rules:
-          javascript/arrayCallbackReturn: error
-          javascript/forDirection: warn
+          javascript/noUndef: error
+          javascript/noUnusedVars: warn
     testSuite:
       command: npm run test
   env:
@@ -19,7 +19,7 @@ revolte:
       branch: staging
       codeReview: true
       codeQuality: true
-      testSuite: false
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -32,14 +32,9 @@ revolte:
               BASE_URL: /api/v1
               DATABASE_URL: '#{db.dbConnectionString}'
               PORT: '8080'
-          insights:
-            cpu:
-              - cpu_time_idle
-              - cpu_time_user
-              - cpu_time_system
           specifications:
             cpu: 2
-            memory: 4
+            memory: 2
             storage: 30
         rid_2:
           type: DATABASE
@@ -71,7 +66,7 @@ revolte:
               DATABASE_NAME: '#{db.dbName}'
           specifications:
             cpu: 2
-            memory: 4
+            memory: 1
             storage: 30
         rid_2:
           type: DATABASE
@@ -120,14 +115,14 @@ revolte:
     preview:
       codeReview: true
       codeQuality: true
-      testSuite: false
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
           name: web_service
           entryPoint: index.js
           properties:
-            health: /health
+            health: /api/health
             port: 8080
             variables:
               BASE_URL: /api/v1
