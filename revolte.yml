@@ -11,7 +11,7 @@ revolte:
       codeStyle:
         rules:
           javascript/noUndef: error
-          javascript/noUnusedVars: warn
+          javascript/noUnusedVars: error
     testSuite:
       command: npm run test
   env:
