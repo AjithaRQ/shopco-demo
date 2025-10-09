@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: PAMS
-  appName: shopco-app-api
+  project: Potrait
+  appName: shopco-appp
   config:
     codeReview:
       summarize: true
@@ -17,6 +17,7 @@ revolte:
       branch: staging
       codeReview: true
       codeQuality: true
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -50,6 +51,7 @@ revolte:
       branch: qa
       codeReview: true
       codeQuality: true
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -78,6 +80,7 @@ revolte:
       branch: main
       codeReview: false
       codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -112,6 +115,7 @@ revolte:
     preview:
       codeReview: true
       codeQuality: true
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
