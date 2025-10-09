@@ -7,11 +7,8 @@ revolte:
       summarize: true
       suggestFixes: false
       commentStyle: Balanced
-    codeQuality:
-      codeStyle:
-        rules:
-          javascript/noUndef: error
-          javascript/noUnusedVars: error
+    testSuite:
+      command: npm
   env:
     staging:
       branch: staging
