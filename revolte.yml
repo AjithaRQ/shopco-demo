@@ -1,14 +1,19 @@
 revolte:
   version: '1.0'
-  project: Potrait
-  appName: shopco-appp
+  project: Hopscotch
+  appName: app-new
   config:
     codeReview:
-      summarize: true
-      suggestFixes: false
-      commentStyle: Balanced
+      summarize: false
+      suggestFixes: true
+      commentStyle: Concise
+    codeQuality:
+      codeStyle:
+        rules:
+          javascript/noUndef: warn
+          javascript/noUnusedVars: warn
     testSuite:
-      command: npm
+      command: npm run test
   env:
     staging:
       branch: staging
@@ -26,10 +31,10 @@ revolte:
             variables:
               BASE_URL: /api/v1
               DATABASE_URL: '#{db.dbConnectionString}'
-              PORT: '8080'
+              DATABASE_PORT: '8080'
           specifications:
             cpu: 2
-            memory: 2
+            memory: 4
             storage: 30
         rid_2:
           type: DATABASE
@@ -108,9 +113,9 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: true
-      codeQuality: true
-      testSuite: true
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
