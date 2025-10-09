@@ -10,10 +10,8 @@ revolte:
     codeQuality:
       codeStyle:
         rules:
-          javascript/noUndef: warn
-          javascript/noUnusedVars: warn
-    testSuite:
-      command: npm run test
+          javascript/noUndef: error
+          javascript/noUnusedVars: error
   env:
     staging:
       branch: staging
