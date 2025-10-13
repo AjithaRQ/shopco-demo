@@ -1,23 +1,10 @@
 revolte:
   version: '1.0'
-  project: Potrait
-  appName: shopco-appp
-  config:
-    codeReview:
-      summarize: true
-      suggestFixes: false
-      commentStyle: Balanced
-    codeQuality:
-      codeStyle:
-        rules:
-          javascript/arrayCallbackReturn: error
-          javascript/forDirection: warn
+  project: New Project
+  appName: app-new
   env:
     staging:
       branch: staging
-      codeReview: true
-      codeQuality: true
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
