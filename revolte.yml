@@ -1,25 +1,10 @@
 revolte:
   version: '1.0'
-  project: Hopscotch
-  appName: app-new
-  config:
-    codeReview:
-      summarize: false
-      suggestFixes: true
-      commentStyle: Concise
-    codeQuality:
-      codeStyle:
-        rules:
-          javascript/noUndef: warn
-          javascript/noUnusedVars: warn
-    testSuite:
-      command: npm run test
+  project: MacBook
+  appName: shopco
   env:
     staging:
       branch: staging
-      codeReview: true
-      codeQuality: true
-      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
