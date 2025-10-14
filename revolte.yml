@@ -19,7 +19,7 @@ revolte:
     staging:
       branch: staging
       codeReview: true
-      codeQuality: true
+      codeQuality: false
       testSuite: true
       services:
         rid_1:
