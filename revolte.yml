@@ -11,6 +11,8 @@ revolte:
       codeStyle:
         rules:
           typescript/adjacentOverloadSignatures: error
+          javascript/noUndef: warn
+          javascript/noUnusedVars: error
     testSuite:
       command: npm run test
   env:
