@@ -29,11 +29,14 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
+        rid_3:
+          type: STORAGE_BUCKET
+          name: storage_bucket_service
+          configurations:
+            versioningStatus: enabled
+            public: false
     qa:
       branch: qa
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -61,11 +64,14 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
+        rid_3:
+          type: STORAGE_BUCKET
+          name: storage_bucket_service
+          configurations:
+            versioningStatus: enabled
+            public: false
     production:
       branch: main
-      codeReview: true
-      codeQuality: true
-      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -93,10 +99,13 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
+        rid_3:
+          type: STORAGE_BUCKET
+          name: storage_bucket_service
+          configurations:
+            versioningStatus: enabled
+            public: false
     preview:
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -124,3 +133,9 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
+        rid_3:
+          type: STORAGE_BUCKET
+          name: storage_bucket_service
+          configurations:
+            versioningStatus: enabled
+            public: false
