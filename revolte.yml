@@ -1,25 +1,10 @@
 revolte:
   version: '1.0'
-  project: ShopcoEcom
-  appName: ShopCoEcomStore
-  config:
-    codeReview:
-      summarize: true
-      suggestFixes: false
-      commentStyle: Balanced
-    codeQuality:
-      codeStyle:
-        rules:
-          javascript/noUndef: warn
-          javascript/noUnusedVars: error
-    testSuite:
-      command: npm run test
+  project: Untitled Project
+  appName: apicheck
   env:
     staging:
       branch: staging
-      codeReview: true
-      codeQuality: false
-      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
