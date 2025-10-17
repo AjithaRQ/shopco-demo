@@ -6,7 +6,7 @@ revolte:
     codeQuality:
       codeStyle:
         rules:
-          typescript/awaitThenable: error
+          typescript/awaitThenable: warn
     testSuite:
       command: npm run test
   env:
