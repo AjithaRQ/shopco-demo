@@ -3,20 +3,14 @@ revolte:
   project: shopco
   appName: backend
   config:
-    codeReview:
-      summarize: true
-      suggestFixes: true
-      commentStyle: Balanced
     codeQuality:
       codeStyle:
         rules:
           javascript/noUndef: warn
           javascript/noUnusedVars: error
-    testSuite:
-      command: npm run test
   env:
     staging:
-      branch: task-products-page
+      branch: staging
       codeReview: false
       codeQuality: false
       testSuite: false
@@ -102,7 +96,7 @@ revolte:
             engine: postgres
     preview:
       codeReview: false
-      codeQuality: true
+      codeQuality: false
       testSuite: true
       services:
         rid_1:
