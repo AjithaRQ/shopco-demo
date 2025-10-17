@@ -1,6 +1,6 @@
 revolte:
   version: '1.0'
-  project: PAMS
+  project: Untitled Project
   appName: api-check
   config:
     codeReview:
