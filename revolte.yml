@@ -1,6 +1,6 @@
 revolte:
   version: '1.0'
-  project: Untitled Project
+  project: PAMS
   appName: api-check
   config:
     codeReview:
@@ -16,9 +16,6 @@ revolte:
   env:
     staging:
       branch: staging
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -45,9 +42,6 @@ revolte:
             engine: postgres
     qa:
       branch: qa
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -77,9 +71,6 @@ revolte:
             engine: postgres
     production:
       branch: main
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
