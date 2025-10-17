@@ -12,9 +12,9 @@ revolte:
   env:
     staging:
       branch: task-products-page
-      codeReview: false
+      codeReview: true
       codeQuality: false
-      testSuite: false
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
