@@ -7,6 +7,11 @@ revolte:
       summarize: true
       suggestFixes: true
       commentStyle: Balanced
+    codeQuality:
+      codeStyle:
+        rules:
+          javascript/noUndef: warn
+          javascript/noUnusedVars: error
     testSuite:
       command: npm run test
   env:
@@ -97,7 +102,7 @@ revolte:
             engine: postgres
     preview:
       codeReview: false
-      codeQuality: false
+      codeQuality: true
       testSuite: true
       services:
         rid_1:
