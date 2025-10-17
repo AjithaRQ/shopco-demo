@@ -1,8 +1,12 @@
 revolte:
   version: '1.0'
-  project: AB Project
-  appName: api-check
+  project: AB Proj
+  appName: shopco-app
   config:
+    codeReview:
+      summarize: true
+      suggestFixes: false
+      commentStyle: Balanced
     codeQuality:
       codeStyle:
         rules:
@@ -13,9 +17,6 @@ revolte:
   env:
     staging:
       branch: staging
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -42,9 +43,6 @@ revolte:
             engine: postgres
     qa:
       branch: qa
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -74,9 +72,6 @@ revolte:
             engine: postgres
     production:
       branch: main
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
