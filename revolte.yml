@@ -7,14 +7,14 @@ revolte:
       summarize: true
       suggestFixes: true
       commentStyle: Balanced
-    codeQuality:
-      codeStyle:
-        rules:
-          javascript/noUndef: warn
-          javascript/noUnusedVars: warn
+    testSuite:
+      command: npm run test
   env:
     staging:
       branch: task-products-page
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -39,6 +39,9 @@ revolte:
             engine: postgres
     qa:
       branch: qa
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -63,6 +66,9 @@ revolte:
             engine: postgres
     production:
       branch: main
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -91,8 +97,8 @@ revolte:
             engine: postgres
     preview:
       codeReview: false
-      codeQuality: true
-      testSuite: false
+      codeQuality: false
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
