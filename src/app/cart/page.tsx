@@ -87,7 +87,7 @@ export default function CartPage() {
                     <InputGroup.Input
                       type="text"
                       name="code"
-                      placeholder="Add promo code"
+                      placeholder="Add promos code"
                       className="bg-transparent placeholder:text-black/40"
                     />
                   </InputGroup>
