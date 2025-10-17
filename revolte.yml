@@ -11,7 +11,10 @@ revolte:
       command: npm run test
   env:
     staging:
-      branch: staging
+      branch: task-products-page
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -28,6 +31,9 @@ revolte:
             storage: 30
     qa:
       branch: qa
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -44,6 +50,9 @@ revolte:
             storage: 30
     production:
       branch: main
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
