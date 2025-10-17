@@ -1,10 +1,21 @@
 revolte:
   version: '1.0'
-  project: Untitled Project
-  appName: apicheck
+  project: AB Project
+  appName: api-check
+  config:
+    codeQuality:
+      codeStyle:
+        rules:
+          javascript/noUndef: warn
+          javascript/noUnusedVars: warn
+    testSuite:
+      command: npm run test
   env:
     staging:
       branch: staging
+      codeReview: false
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -29,13 +40,6 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
-        rid_3:
-          type: STORAGE_BUCKET
-          name: storage_bucket_service
-          configurations:
-            bucketName: apicheck-stag
-            versioningStatus: enabled
-            public: false
     qa:
       branch: qa
       services:
@@ -65,13 +69,6 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
-        rid_3:
-          type: STORAGE_BUCKET
-          name: storage_bucket_service
-          configurations:
-            bucketName: apicheck-qa
-            versioningStatus: enabled
-            public: false
     production:
       branch: main
       services:
@@ -101,13 +98,6 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
-        rid_3:
-          type: STORAGE_BUCKET
-          name: storage_bucket_service
-          configurations:
-            bucketName: apicheck-prod
-            versioningStatus: enabled
-            public: false
     preview:
       services:
         rid_1:
@@ -136,10 +126,3 @@ revolte:
             memory: 1
             storage: 30
             engine: postgres
-        rid_3:
-          type: STORAGE_BUCKET
-          name: storage_bucket_service
-          configurations:
-            bucketName: apicheck-preview
-            versioningStatus: enabled
-            public: false
