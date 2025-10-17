@@ -1,6 +1,6 @@
 revolte:
   version: '1.0'
-  project: Untitled Project
+  project: AB Project
   appName: api-check
   config:
     codeReview:
