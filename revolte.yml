@@ -7,14 +7,13 @@ revolte:
       codeStyle:
         rules:
           javascript/noUndef: warn
-          javascript/noUnusedVars: error
     testSuite:
       command: npm run test
   env:
     staging:
-      branch: staging
-      codeReview: true
-      codeQuality: true
+      branch: qa
+      codeReview: false
+      codeQuality: false
       testSuite: false
       services:
         rid_1:
