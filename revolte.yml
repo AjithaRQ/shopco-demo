@@ -8,6 +8,8 @@ revolte:
         rules:
           javascript/noUndef: warn
           javascript/noUnusedVars: error
+    testSuite:
+      command: npm run test
   env:
     staging:
       branch: staging
@@ -96,7 +98,7 @@ revolte:
             engine: postgres
     preview:
       codeReview: false
-      codeQuality: false
+      codeQuality: true
       testSuite: true
       services:
         rid_1:
