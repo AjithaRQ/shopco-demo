@@ -11,8 +11,8 @@ revolte:
   env:
     staging:
       branch: staging
-      codeReview: false
-      codeQuality: false
+      codeReview: true
+      codeQuality: true
       testSuite: false
       services:
         rid_1:
