@@ -7,14 +7,14 @@ revolte:
       summarize: true
       suggestFixes: true
       commentStyle: Balanced
-    testSuite:
-      command: npm run test
+    codeQuality:
+      codeStyle:
+        rules:
+          javascript/noUndef: warn
+          javascript/noUnusedVars: warn
   env:
     staging:
       branch: task-products-page
-      codeReview: true
-      codeQuality: false
-      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -29,11 +29,16 @@ revolte:
             cpu: 2
             memory: 1
             storage: 30
+        rid_2:
+          type: DATABASE
+          name: db
+          specifications:
+            cpu: 2
+            memory: 1
+            storage: 30
+            engine: postgres
     qa:
       branch: qa
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -48,11 +53,16 @@ revolte:
             cpu: 2
             memory: 1
             storage: 30
+        rid_2:
+          type: DATABASE
+          name: db
+          specifications:
+            cpu: 2
+            memory: 1
+            storage: 30
+            engine: postgres
     production:
       branch: main
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -71,10 +81,18 @@ revolte:
               replica:
                 min: 1
                 max: 1
+        rid_2:
+          type: DATABASE
+          name: db
+          specifications:
+            cpu: 2
+            memory: 1
+            storage: 30
+            engine: postgres
     preview:
-      codeReview: true
+      codeReview: false
       codeQuality: true
-      testSuite: true
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -85,7 +103,17 @@ revolte:
             port: 8080
             variables:
               BASE_URL: /api/v1
+              DATABASE_URL: '#{db.dbConnectionString}'
+              PORT: '8080'
           specifications:
             cpu: 2
             memory: 1
             storage: 30
+        rid_2:
+          type: DATABASE
+          name: db
+          specifications:
+            cpu: 2
+            memory: 1
+            storage: 30
+            engine: postgres
