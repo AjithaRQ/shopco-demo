@@ -1,24 +1,10 @@
 revolte:
   version: '1.0'
-  project: AB Project
-  appName: api-check
-  config:
-    codeReview:
-      summarize: true
-      suggestFixes: true
-      commentStyle: Verbose
-    codeQuality:
-      codeStyle:
-        rules:
-          typescript/adjacentOverloadSignatures: warn
-    testSuite:
-      command: npm run test
+  project: France
+  appName: shopco-app
   env:
     staging:
-      branch: qa
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      branch: staging
       services:
         rid_1:
           type: WEB_SERVICE
