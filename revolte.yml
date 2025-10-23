@@ -7,10 +7,12 @@ revolte:
       codeStyle:
         rules:
           typescript/adjacentOverloadSignatures: warn
+    testSuite:
+      command: npm run test
   env:
     staging:
       branch: staging
-      codeReview: false
+      codeReview: true
       codeQuality: true
       testSuite: true
       services:
@@ -70,7 +72,7 @@ revolte:
             storage: 30
             engine: postgres
     production:
-      branch: staging
+      branch: main
       codeReview: false
       codeQuality: true
       testSuite: true
