@@ -1,7 +1,12 @@
 revolte:
   version: '1.0'
-  project: France
-  appName: shopco-app
+  project: Fun Four
+  appName: shopco-oct3
+  config:
+    codeQuality:
+      codeStyle:
+        rules:
+          typescript/adjacentOverloadSignatures: warn
   env:
     staging:
       branch: staging
@@ -31,9 +36,6 @@ revolte:
             engine: postgres
     qa:
       branch: qa
-      codeReview: false
-      codeQuality: false
-      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -62,10 +64,10 @@ revolte:
             storage: 30
             engine: postgres
     production:
-      branch: main
+      branch: staging
       codeReview: false
-      codeQuality: false
-      testSuite: false
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -76,14 +78,11 @@ revolte:
             port: 8080
             variables:
               BASE_URL: /api/v1
-              DATABASE_URL: '#{db.dbUrl}'
-              DATABASE_PORT: '#{db.dbPort}'
-              DATABASE_USERNAME: '#{db.dbUsername}'
-              DATABASE_PASSWORD: '#{db.dbPassword}'
-              DATABASE_NAME: '#{db.dbName}'
+              DATABASE_URL: '#{db.dbConnectionString}'
+              PORT: '8080'
           specifications:
             cpu: 2
-            memory: 1
+            memory: 2
             storage: 30
             autoScaling:
               replica:
@@ -98,9 +97,6 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: true
-      codeQuality: true
-      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
