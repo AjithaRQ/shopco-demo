@@ -11,10 +11,10 @@ revolte:
       command: npm run test
   env:
     staging:
-      branch: staging
-      codeReview: true
-      codeQuality: true
-      testSuite: true
+      branch: qa
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -74,8 +74,8 @@ revolte:
     production:
       branch: main
       codeReview: false
-      codeQuality: true
-      testSuite: true
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -105,9 +105,9 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
