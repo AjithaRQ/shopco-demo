@@ -9,7 +9,10 @@ revolte:
           typescript/adjacentOverloadSignatures: warn
   env:
     staging:
-      branch: qa
+      branch: staging
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -41,6 +44,9 @@ revolte:
             engine: postgres
     qa:
       branch: qa
+      codeReview: true
+      codeQuality: true
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -67,6 +73,9 @@ revolte:
             engine: postgres
     production:
       branch: main
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -99,6 +108,9 @@ revolte:
             storage: 30
             engine: postgres
     preview:
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
