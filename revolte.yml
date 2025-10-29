@@ -1,20 +1,25 @@
 revolte:
   version: '1.0'
-  project: Fun Four
-  appName: shopco-oct3
+  project: Techno-vault
+  appName: tech-app
   config:
+    codeReview:
+      summarize: true
+      suggestFixes: false
+      commentStyle: Balanced
     codeQuality:
       codeStyle:
         rules:
-          typescript/adjacentOverloadSignatures: warn
+          javascript/noUndef: warn
+          javascript/noUnusedVars: warn
     testSuite:
       command: npm run test
   env:
     staging:
       branch: staging
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
