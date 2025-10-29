@@ -1,7 +1,12 @@
 revolte:
   version: '1.0'
-  project: Fun Four
-  appName: shopco-oct3
+  project: Techno-vault
+  appName: appp-check
+  config:
+    codeQuality:
+      codeStyle:
+        rules:
+          typescript/adjacentOverloadSignatures: warn
   env:
     staging:
       branch: qa
