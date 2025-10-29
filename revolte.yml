@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
   project: Techno-vault
-  appName: tech-app
+  appName: appp-check
   config:
     codeReview:
       summarize: true
