@@ -77,7 +77,7 @@ revolte:
             storage: 30
             engine: postgres
     production:
-      branch: main
+      branch: staging
       codeReview: true
       codeQuality: true
       testSuite: true
