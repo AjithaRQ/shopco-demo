@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Untitled Project
-  appName: shopco app
+  project: Reasons13
+  appName: shopcoapp-api
   config:
     codeReview:
       summarize: true
@@ -46,9 +46,9 @@ revolte:
             engine: postgres
     qa:
       branch: qa
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -66,7 +66,7 @@ revolte:
               DATABASE_NAME: '#{db.dbName}'
           specifications:
             cpu: 2
-            memory: 1
+            memory: 2
             storage: 30
         rid_2:
           type: DATABASE
@@ -78,9 +78,9 @@ revolte:
             engine: postgres
     production:
       branch: main
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
