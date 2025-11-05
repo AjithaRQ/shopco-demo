@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Reasons13
-  appName: shopcoapp-api
+  project: BuildCore
+  appName: build-app
   config:
     codeReview:
       summarize: true
@@ -45,7 +45,7 @@ revolte:
             storage: 30
             engine: postgres
     qa:
-      branch: qa
+      branch: staging
       codeReview: true
       codeQuality: true
       testSuite: true
