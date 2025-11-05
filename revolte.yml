@@ -1,19 +1,7 @@
 revolte:
   version: '1.0'
-  project: BuildCore
-  appName: build-app
-  config:
-    codeReview:
-      summarize: true
-      suggestFixes: false
-      commentStyle: Balanced
-    codeQuality:
-      codeStyle:
-        rules:
-          javascript/noUndef: warn
-          javascript/noUnusedVars: warn
-    testSuite:
-      command: npm run test
+  project: Paypal
+  appName: shopcoapp
   env:
     staging:
       branch: staging
@@ -46,9 +34,6 @@ revolte:
             engine: postgres
     qa:
       branch: qa
-      codeReview: true
-      codeQuality: true
-      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
