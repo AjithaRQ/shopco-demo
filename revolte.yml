@@ -16,7 +16,7 @@ revolte:
       command: npm run test
   env:
     staging:
-      branch: staging
+      branch: qa
       codeReview: false
       codeQuality: false
       testSuite: false
@@ -45,7 +45,7 @@ revolte:
             storage: 30
             engine: postgres
     qa:
-      branch: staging
+      branch: task-products-page
       codeReview: false
       codeQuality: false
       testSuite: false
@@ -77,7 +77,7 @@ revolte:
             storage: 30
             engine: postgres
     production:
-      branch: staging
+      branch: main
       codeReview: true
       codeQuality: true
       testSuite: true
