@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: BuildCore
-  appName: build-app
+  project: Linear
+  appName: newappcheck
   config:
     codeReview:
       summarize: true
