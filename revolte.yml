@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Linear
-  appName: newappcheck
+  project: SAPS
+  appName: sap-backend-app
   config:
     codeReview:
       summarize: true
@@ -77,7 +77,7 @@ revolte:
             storage: 30
             engine: postgres
     production:
-      branch: main
+      branch: staging
       codeReview: true
       codeQuality: true
       testSuite: true
