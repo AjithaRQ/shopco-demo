@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: PSGCAS
-  appName: psg-backend
+  project: shopco
+  appName: backend
   config:
     codeReview:
       summarize: true
@@ -41,7 +41,7 @@ revolte:
           name: db
           specifications:
             cpu: 2
-            memory: 2
+            memory: 1
             storage: 30
             engine: postgres
     qa:
@@ -100,13 +100,13 @@ revolte:
             autoScaling:
               replica:
                 min: 1
-                max: 3
+                max: 1
         rid_3:
           type: DATABASE
           name: db
           specifications:
             cpu: 2
-            memory: 4
+            memory: 1
             storage: 30
             engine: postgres
     preview:
