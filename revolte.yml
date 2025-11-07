@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: SAPS
-  appName: sap-backend-app
+  project: PSGCAS
+  appName: psg-backend
   config:
     codeReview:
       summarize: true
@@ -16,10 +16,10 @@ revolte:
       command: npm run test
   env:
     staging:
-      branch: staging
+      branch: qa
       codeReview: false
-      codeQuality: true
-      testSuite: true
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -77,7 +77,10 @@ revolte:
             storage: 30
             engine: postgres
     production:
-      branch: main
+      branch: staging
+      codeReview: false
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
