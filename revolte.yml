@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: shopco
-  appName: backend
+  project: lenova
+  appName: backend-app
   config:
     codeReview:
       summarize: true
@@ -45,10 +45,10 @@ revolte:
             storage: 30
             engine: postgres
     qa:
-      branch: task-products-page
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      branch: staging
+      codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -77,10 +77,10 @@ revolte:
             storage: 30
             engine: postgres
     production:
-      branch: staging
+      branch: qa
       codeReview: false
-      codeQuality: true
-      testSuite: true
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -111,8 +111,8 @@ revolte:
             engine: postgres
     preview:
       codeReview: false
-      codeQuality: true
-      testSuite: true
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
