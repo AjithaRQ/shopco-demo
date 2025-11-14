@@ -1,6 +1,6 @@
 revolte:
   version: '1.0'
-  project: lenova
+  project: Project One
   appName: backend-app
   config:
     codeReview:
@@ -32,6 +32,20 @@ revolte:
               BASE_URL: /api/v1
               DATABASE_URL: '#{db.dbConnectionString}'
               PORT: '8080'
+          insights:
+            cpu:
+              - cpu_time_idle
+              - cpu_time_user
+              - cpu_time_system
+            swap:
+              - swap_used
+            mem:
+              - mem_free
+              - mem_total
+            disk:
+              - disk_used
+              - disk_total
+              - disk_free
           specifications:
             cpu: 2
             memory: 2
