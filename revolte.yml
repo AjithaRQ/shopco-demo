@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Project One
-  appName: backend-app
+  project: Bluedart
+  appName: shopco-app
   config:
     codeReview:
       summarize: true
@@ -17,9 +17,9 @@ revolte:
   env:
     staging:
       branch: staging
-      codeReview: true
-      codeQuality: true
-      testSuite: true
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -60,9 +60,9 @@ revolte:
             engine: postgres
     qa:
       branch: qa
-      codeReview: true
-      codeQuality: true
-      testSuite: true
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
@@ -124,9 +124,9 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
