@@ -91,10 +91,10 @@ revolte:
             storage: 30
             engine: postgres
     production:
-      branch: qa
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      branch: staging
+      codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -107,6 +107,11 @@ revolte:
               BASE_URL: /api/v1
               DATABASE_URL: '#{db.dbConnectionString}'
               PORT: '8080'
+          insights:
+            cpu:
+              - cpu_time_idle
+              - cpu_time_user
+              - cpu_time_system
           specifications:
             cpu: 2
             memory: 2
@@ -124,9 +129,6 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: true
-      codeQuality: true
-      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
