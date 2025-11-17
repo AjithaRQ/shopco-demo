@@ -16,7 +16,7 @@ revolte:
       command: npm run test
   env:
     staging:
-      branch: staging
+      branch: qa
       codeReview: false
       codeQuality: false
       testSuite: false
