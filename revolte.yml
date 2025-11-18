@@ -1,6 +1,6 @@
 revolte:
   version: '1.0'
-  project: AC Project
+  project: Untitled Project
   appName: shopcoapp
   config:
     codeReview:
@@ -17,9 +17,9 @@ revolte:
   env:
     staging:
       branch: staging
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -92,9 +92,9 @@ revolte:
             engine: postgres
     production:
       branch: qa
-      codeReview: true
-      codeQuality: true
-      testSuite: true
+      codeReview: false
+      codeQuality: false
+      testSuite: false
       services:
         rid_1:
           type: WEB_SERVICE
