@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Hexcode
-  appName: backend
+  project: Bluedart Express
+  appName: backend-app
   config:
     codeReview:
       summarize: true
