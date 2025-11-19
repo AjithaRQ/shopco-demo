@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Bluedrat co
-  appName: backend-app
+  project: Xpresso
+  appName: shopco-app
   config:
     codeReview:
       summarize: true
@@ -117,9 +117,9 @@ revolte:
             storage: 30
             engine: postgres
     preview:
-      codeReview: false
-      codeQuality: false
-      testSuite: false
+      codeReview: true
+      codeQuality: true
+      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -130,11 +130,13 @@ revolte:
             port: 8080
             variables:
               BASE_URL: /api/v1
-              DATABASE_URL: '#{db.dbUrl}'
-              DATABASE_PORT: '#{db.dbPort}'
-              DATABASE_USERNAME: '#{db.dbUsername}'
-              DATABASE_PASSWORD: '#{db.dbPassword}'
-              DATABASE_NAME: '#{db.dbName}'
+              DATABASE_URL: '#{db.dbConnectionString}'
+              PORT: '8080'
+          insights:
+            cpu:
+              - cpu_time_idle
+              - cpu_time_user
+              - cpu_time_system
           specifications:
             cpu: 2
             memory: 1
