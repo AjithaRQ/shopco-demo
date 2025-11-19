@@ -1,6 +1,6 @@
 revolte:
   version: '1.0'
-  project: Bluedart Express
+  project: Blueberry
   appName: backend-app
   config:
     codeReview:
