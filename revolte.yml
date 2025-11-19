@@ -1,17 +1,16 @@
 revolte:
   version: '1.0'
-  project: Blueberry
+  project: Bluedrat co
   appName: backend-app
   config:
     codeReview:
       summarize: true
-      suggestFixes: true
+      suggestFixes: false
       commentStyle: Concise
     codeQuality:
       codeStyle:
         rules:
-          javascript/noUndef: warn
-          javascript/noUnusedVars: warn
+          typescript/adjacentOverloadSignatures: warn
     testSuite:
       command: npm run test
   env:
@@ -34,21 +33,12 @@ revolte:
               PORT: '8080'
           insights:
             cpu:
-              - cpu_time_user
               - cpu_time_idle
+              - cpu_time_user
               - cpu_time_system
-            swap:
-              - swap_used
-            mem:
-              - mem_free
-              - mem_total
-            disk:
-              - disk_used
-              - disk_total
-              - disk_free
           specifications:
             cpu: 2
-            memory: 2
+            memory: 1
             storage: 30
         rid_2:
           type: DATABASE
