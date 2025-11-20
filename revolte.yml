@@ -1,7 +1,7 @@
 revolte:
   version: '1.0'
-  project: Xpresso
-  appName: shopco-app
+  project: New Project
+  appName: shopcoapp
   config:
     codeReview:
       summarize: true
@@ -11,6 +11,8 @@ revolte:
       codeStyle:
         rules:
           typescript/adjacentOverloadSignatures: warn
+          typescript/arrayType: warn
+          javascript/noUndef: warn
     testSuite:
       command: npm run test
   env:
